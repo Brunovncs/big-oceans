@@ -46,4 +46,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" jars/*.jar --title "${GITHUB_REF_NAME}" --notes "Beta. Pick the jar for your loader and Minecraft version: \`big_oceans-<loader>-<version>+<minecraft>.jar\`. Fabric jars also run on Quilt. See the README for what was tested."
+          gh release create "${GITHUB_REF_NAME}" $(find jars -name "*.jar") --title "${GITHUB_REF_NAME}" --notes "Beta. Pick the jar for your loader and Minecraft version: \`big_oceans-<loader>-<version>+<minecraft>.jar\`. Fabric jars also run on Quilt. See the README for what was tested."
