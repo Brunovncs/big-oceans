@@ -1,0 +1,293 @@
+{
+ "out": "../../build/lab/explore1",
+ "jobs": [
+  {
+   "name": "vanilla_s1",
+   "seed": 1,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "stretch2_s1",
+   "seed": 1,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "stretch",
+    "k": 2,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "stretch4_s1",
+   "seed": 1,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "stretch",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "blend4_s1",
+   "seed": 1,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "blend",
+    "k": 4,
+    "a": 0.6,
+    "b": -0.1,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "basins4_s1",
+   "seed": 1,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.1,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "basins6_s1",
+   "seed": 1,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.1,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s2",
+   "seed": 2,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "stretch2_s2",
+   "seed": 2,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "stretch",
+    "k": 2,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "stretch4_s2",
+   "seed": 2,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "stretch",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "blend4_s2",
+   "seed": 2,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "blend",
+    "k": 4,
+    "a": 0.6,
+    "b": -0.1,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "basins4_s2",
+   "seed": 2,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.1,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "basins6_s2",
+   "seed": 2,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.1,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s3",
+   "seed": 3,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "stretch2_s3",
+   "seed": 3,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "stretch",
+    "k": 2,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "stretch4_s3",
+   "seed": 3,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "stretch",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "blend4_s3",
+   "seed": 3,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "blend",
+    "k": 4,
+    "a": 0.6,
+    "b": -0.1,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "basins4_s3",
+   "seed": 3,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.1,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "basins6_s3",
+   "seed": 3,
+   "radius": 8192,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.1,
+    "floor": -1.0
+   }
+  }
+ ]
+}

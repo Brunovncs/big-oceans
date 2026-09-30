@@ -1,0 +1,15 @@
+{
+ "out": "../../build/lab/speed",
+ "overwrite": true,
+ "jobs": [
+  {
+   "name": "vanilla_s1",
+   "seed": 1,
+   "radius": 4096,
+   "step": 32,
+   "variant": {
+    "family": "vanilla"
+   }
+  }
+ ]
+}

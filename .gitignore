@@ -1,0 +1,15 @@
+.gradle/
+build/
+*/build/
+*/run/
+logs/
+out/
+.idea/
+*.iml
+tools/.venv/
+__pycache__/
+
+# local only
+gw.cmd
+HANDOFF.md
+docs/

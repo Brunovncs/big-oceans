@@ -1,0 +1,74 @@
+{
+ "out": "../../build/lab/val",
+ "jobs": [
+  {
+   "name": "val_vanilla_s5",
+   "seed": 5,
+   "radius": 1024,
+   "step": 16,
+   "cx": -7680,
+   "cz": -1024,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "val_x4_s5",
+   "seed": 5,
+   "radius": 1024,
+   "step": 16,
+   "cx": -7680,
+   "cz": -1024,
+   "variant": {
+    "family": "scale",
+    "scale": 4.0
+   }
+  },
+  {
+   "name": "val_vanilla_s6",
+   "seed": 6,
+   "radius": 1024,
+   "step": 16,
+   "cx": 0,
+   "cz": -5120,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "val_x4_s6",
+   "seed": 6,
+   "radius": 1024,
+   "step": 16,
+   "cx": 0,
+   "cz": -5120,
+   "variant": {
+    "family": "scale",
+    "scale": 4.0
+   }
+  },
+  {
+   "name": "val_vanilla_s7",
+   "seed": 7,
+   "radius": 1024,
+   "step": 16,
+   "cx": -1536,
+   "cz": 5120,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "val_x4_s7",
+   "seed": 7,
+   "radius": 1024,
+   "step": 16,
+   "cx": -1536,
+   "cz": 5120,
+   "variant": {
+    "family": "scale",
+    "scale": 4.0
+   }
+  }
+ ]
+}

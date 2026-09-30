@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "big_oceans_lab",
+  "version": "0.0.0",
+  "name": "Big Oceans Lab (dev only)",
+  "environment": "server",
+  "entrypoints": { "server": ["dev.bigoceans.lab.WorldgenLab"] },
+  "depends": { "fabricloader": "*", "fabric-api": "*" }
+}

@@ -1,0 +1,229 @@
+{
+ "out": "../../build/lab/calib5",
+ "jobs": [
+  {
+   "name": "b2_s1",
+   "seed": 1,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s1",
+   "seed": 1,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s2",
+   "seed": 2,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s2",
+   "seed": 2,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s3",
+   "seed": 3,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s3",
+   "seed": 3,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s4",
+   "seed": 4,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s4",
+   "seed": 4,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s5",
+   "seed": 5,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s5",
+   "seed": 5,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s6",
+   "seed": 6,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s6",
+   "seed": 6,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s7",
+   "seed": 7,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s7",
+   "seed": 7,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b2_s8",
+   "seed": 8,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.3,
+    "w": 0.3,
+    "land": 0.06666666666666667,
+    "ceil": -0.15
+   }
+  },
+  {
+   "name": "b3_s8",
+   "seed": 8,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "shape",
+    "k": 4.6,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.13333333333333333,
+    "ceil": -0.15
+   }
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "out": "../../build/lab/regression",
+ "jobs": [
+  {
+   "name": "vanilla_s105",
+   "seed": 105,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "x4_s105",
+   "seed": 105,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "registry"
+   }
+  },
+  {
+   "name": "vanilla_s134",
+   "seed": 134,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "x4_s134",
+   "seed": 134,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "registry"
+   }
+  },
+  {
+   "name": "vanilla_s135",
+   "seed": 135,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "x4_s135",
+   "seed": 135,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "registry"
+   }
+  },
+  {
+   "name": "vanilla_s137",
+   "seed": 137,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "x4_s137",
+   "seed": 137,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "registry"
+   }
+  },
+  {
+   "name": "vanilla_s140",
+   "seed": 140,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "vanilla"
+   }
+  },
+  {
+   "name": "x4_s140",
+   "seed": 140,
+   "radius": 24576,
+   "step": 128,
+   "variant": {
+    "family": "registry"
+   }
+  }
+ ]
+}

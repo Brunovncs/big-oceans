@@ -1,0 +1,102 @@
+{
+ "vanilla_s105": {
+  "ocean_pct": 29.517957899305557,
+  "deep_pct": 9.38991970486111,
+  "chord_weighted_median": 1152.0,
+  "dist_to_land_p90": 404.7715405015526,
+  "land_share_mass_gt100_pct": 97.21254690657173,
+  "landmass_largest_km2": 1655.324672,
+  "beach_width": 23.384727140651957,
+  "spawn_on_land": true
+ },
+ "x4_s105": {
+  "ocean_pct": 61.31456163194444,
+  "deep_pct": 39.64436848958333,
+  "chord_weighted_median": 5632.0,
+  "dist_to_land_p90": 1583.2725602371816,
+  "land_share_mass_gt100_pct": 56.85961713764814,
+  "landmass_largest_km2": 166.739968,
+  "beach_width": 20.89083298057476,
+  "spawn_on_land": true
+ },
+ "vanilla_s134": {
+  "ocean_pct": 28.035481770833332,
+  "deep_pct": 7.772488064236111,
+  "chord_weighted_median": 1024.0,
+  "dist_to_land_p90": 384.0,
+  "land_share_mass_gt100_pct": 99.01711334765729,
+  "landmass_largest_km2": 1721.516032,
+  "beach_width": 22.980251346499102,
+  "spawn_on_land": true
+ },
+ "x4_s134": {
+  "ocean_pct": 66.78738064236111,
+  "deep_pct": 44.35153537326389,
+  "chord_weighted_median": 6400.0,
+  "dist_to_land_p90": 2048.0,
+  "land_share_mass_gt100_pct": 40.458202311430554,
+  "landmass_largest_km2": 183.05843199999998,
+  "beach_width": 19.89180744067962,
+  "spawn_on_land": true
+ },
+ "vanilla_s135": {
+  "ocean_pct": 28.12432183159722,
+  "deep_pct": 7.545979817708333,
+  "chord_weighted_median": 896.0,
+  "dist_to_land_p90": 362.03867196751236,
+  "land_share_mass_gt100_pct": 97.96574987026466,
+  "landmass_largest_km2": 1701.1343359999998,
+  "beach_width": 23.04366628289012,
+  "spawn_on_land": true
+ },
+ "x4_s135": {
+  "ocean_pct": 49.34421115451389,
+  "deep_pct": 29.166666666666668,
+  "chord_weighted_median": 3712.0,
+  "dist_to_land_p90": 1722.0638780254349,
+  "land_share_mass_gt100_pct": 80.23964120757748,
+  "landmass_largest_km2": 879.5586559999999,
+  "beach_width": 21.259915684418825,
+  "spawn_on_land": true
+ },
+ "vanilla_s137": {
+  "ocean_pct": 29.764811197916668,
+  "deep_pct": 8.766004774305555,
+  "chord_weighted_median": 1024.0,
+  "dist_to_land_p90": 384.0,
+  "land_share_mass_gt100_pct": 98.62020354170288,
+  "landmass_largest_km2": 1673.4126079999999,
+  "beach_width": 21.26808632270973,
+  "spawn_on_land": false
+ },
+ "x4_s137": {
+  "ocean_pct": 65.57074652777779,
+  "deep_pct": 43.18576388888889,
+  "chord_weighted_median": 6144.0,
+  "dist_to_land_p90": 2202.1952683629124,
+  "land_share_mass_gt100_pct": 52.869918058619604,
+  "landmass_largest_km2": 177.71724799999998,
+  "beach_width": 19.776683087027916,
+  "spawn_on_land": false
+ },
+ "vanilla_s140": {
+  "ocean_pct": 30.438232421875,
+  "deep_pct": 10.58078342013889,
+  "chord_weighted_median": 1280.0,
+  "dist_to_land_p90": 404.7715405015526,
+  "land_share_mass_gt100_pct": 97.80156571417429,
+  "landmass_largest_km2": 1643.6101119999998,
+  "beach_width": 21.84411614875191,
+  "spawn_on_land": true
+ },
+ "x4_s140": {
+  "ocean_pct": 65.8447265625,
+  "deep_pct": 45.10498046875,
+  "chord_weighted_median": 7424.0,
+  "dist_to_land_p90": 1936.9914816539592,
+  "land_share_mass_gt100_pct": 34.89397188467953,
+  "landmass_largest_km2": 287.932416,
+  "beach_width": 19.80708248163085,
+  "spawn_on_land": true
+ }
+}

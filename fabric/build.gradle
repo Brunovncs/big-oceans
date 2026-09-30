@@ -1,0 +1,61 @@
+plugins {
+    id 'fabric-loom'
+}
+
+base.archivesName = "${mod_id}-fabric"
+
+def common = project(':common')
+
+sourceSets.main {
+    java.srcDir common.file('src/main/java')
+    resources.srcDir common.file('src/main/resources')
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+}
+
+processResources {
+    def props = [version: version, mod_id: mod_id, mod_name: mod_name, mod_description: mod_description,
+                 mod_license: mod_license, minecraft_version: minecraft_version, fabric_loader_version: fabric_loader_version]
+    inputs.properties props
+    filesMatching('fabric.mod.json') { expand props }
+}
+
+loom {
+    runs {
+        server {
+            runDir 'run/server'
+        }
+        client {
+            runDir 'run/client'
+            if (project.hasProperty('clientArgs')) programArgs(*project.clientArgs.split(' '))
+        }
+    }
+}
+
+sourceSets {
+    lab {
+        compileClasspath += sourceSets.main.compileClasspath + sourceSets.main.output
+        runtimeClasspath += sourceSets.main.runtimeClasspath + sourceSets.main.output
+    }
+}
+
+loom {
+    mods {
+        big_oceans { sourceSet sourceSets.main }
+        big_oceans_lab { sourceSet sourceSets.lab }
+    }
+    runs {
+        lab {
+            server()
+            source sourceSets.lab
+            runDir 'run/lab'
+            vmArgs '-Xmx10G', "-Dbigoceans.lab.jobs=${project.hasProperty('labJobs') ? rootProject.file(project.labJobs).absolutePath : ''}"
+            programArgs 'nogui'
+        }
+    }
+}

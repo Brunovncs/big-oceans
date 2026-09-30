@@ -1,0 +1,21 @@
+plugins {
+    id 'net.neoforged.moddev'
+}
+
+base.archivesName = "${mod_id}-common"
+
+neoForge {
+    neoFormVersion = neoform_version
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// ModDevGradle's vanilla mode only puts Minecraft on the compile classpath.
+sourceSets.test.runtimeClasspath += sourceSets.main.compileClasspath

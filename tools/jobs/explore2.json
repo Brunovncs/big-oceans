@@ -1,0 +1,581 @@
+{
+ "out": "../../build/lab/explore2",
+ "jobs": [
+  {
+   "name": "vanilla_s1",
+   "seed": 1,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l0_s1",
+   "seed": 1,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l2_s1",
+   "seed": 1,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l3t0_s1",
+   "seed": 1,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0.0,
+    "w": 0.3,
+    "land": 0.3,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b6l2_s1",
+   "seed": 1,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b8l2_s1",
+   "seed": 1,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 8,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s2",
+   "seed": 2,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l0_s2",
+   "seed": 2,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l2_s2",
+   "seed": 2,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l3t0_s2",
+   "seed": 2,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0.0,
+    "w": 0.3,
+    "land": 0.3,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b6l2_s2",
+   "seed": 2,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b8l2_s2",
+   "seed": 2,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 8,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s3",
+   "seed": 3,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l0_s3",
+   "seed": 3,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l2_s3",
+   "seed": 3,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l3t0_s3",
+   "seed": 3,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0.0,
+    "w": 0.3,
+    "land": 0.3,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b6l2_s3",
+   "seed": 3,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b8l2_s3",
+   "seed": 3,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 8,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s4",
+   "seed": 4,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l0_s4",
+   "seed": 4,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l2_s4",
+   "seed": 4,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l3t0_s4",
+   "seed": 4,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0.0,
+    "w": 0.3,
+    "land": 0.3,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b6l2_s4",
+   "seed": 4,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b8l2_s4",
+   "seed": 4,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 8,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s5",
+   "seed": 5,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l0_s5",
+   "seed": 5,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l2_s5",
+   "seed": 5,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l3t0_s5",
+   "seed": 5,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0.0,
+    "w": 0.3,
+    "land": 0.3,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b6l2_s5",
+   "seed": 5,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b8l2_s5",
+   "seed": 5,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 8,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "vanilla_s6",
+   "seed": 6,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "vanilla",
+    "k": 1,
+    "a": 0,
+    "b": 0,
+    "t": 0,
+    "w": 0.2,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l0_s6",
+   "seed": 6,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l2_s6",
+   "seed": 6,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.25,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b4l3t0_s6",
+   "seed": 6,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 4,
+    "a": 0,
+    "b": 0,
+    "t": 0.0,
+    "w": 0.3,
+    "land": 0.3,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b6l2_s6",
+   "seed": 6,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 6,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  },
+  {
+   "name": "b8l2_s6",
+   "seed": 6,
+   "radius": 12288,
+   "step": 64,
+   "variant": {
+    "family": "basins",
+    "k": 8,
+    "a": 0,
+    "b": 0,
+    "t": -0.1,
+    "w": 0.3,
+    "land": 0.2,
+    "floor": -1.0
+   }
+  }
+ ]
+}

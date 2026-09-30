@@ -1,0 +1,6 @@
+matplotlib==3.11.2
+numpy==2.5.3
+pillow==12.3.0
+portablemc==4.4.1
+scipy==1.18.1
+truststore==0.10.4
