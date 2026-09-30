@@ -1,6 +1,5 @@
 package dev.bigoceans;
 
-import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +11,8 @@ import java.util.stream.Stream;
 public final class BigOceans {
     public static final String MOD_ID = "big_oceans";
     public static final Logger LOGGER = LoggerFactory.getLogger("Big Oceans");
-    public static final ResourceLocation OCEAN_BASINS = ResourceLocation.fromNamespaceAndPath(MOD_ID, "ocean_basins");
+    /** Path of the density function type; the registry id is {@code big_oceans:ocean_basins}. */
+    public static final String OCEAN_BASINS = "ocean_basins";
     public static final String CONFIG_FILE = "big_oceans.toml";
 
     private static final String GLOBAL_HEADER = """

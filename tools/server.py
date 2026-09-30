@@ -1,6 +1,6 @@
 """Drive real (non-dev) Minecraft servers for benchmarks and compatibility tests.
 
-  python server.py setup <loader> <dir>                 install a Fabric/NeoForge/Quilt 1.21.1 server into <dir>
+  python server.py setup <loader> <dir> [--mc 1.21.1] [--neoforge 21.1.252]   install a Fabric/NeoForge/Quilt server
   python server.py run <dir> <seed> [--mods a.jar ...] [--pregen X,Z,R] [--cmd "..."] [--scale S] [--keep-world]
 
 `run` wipes the world (unless --keep-world), copies the given mods, starts the server, optionally runs a Chunky
@@ -18,6 +18,13 @@ import time
 import urllib.request
 from pathlib import Path
 
+try:
+    import truststore  # Windows certificate store; Python's bundled CAs reject some Maven hosts
+
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+
 JAVA = str(Path.home() / ".jdks/jdk-21.0.12.1+1/bin/java.exe")
 MC = "1.21.1"
 FABRIC_LOADER = "0.19.5"
@@ -25,10 +32,10 @@ NEOFORGE = "21.1.252"
 QUILT_INSTALLER = "0.15.1"
 
 
-def setup(loader, d: Path):
+def setup(loader, d: Path, mc=MC, neoforge=NEOFORGE):
     d.mkdir(parents=True, exist_ok=True)
     if loader == "fabric":
-        url = f"https://meta.fabricmc.net/v2/versions/loader/{MC}/{FABRIC_LOADER}/1.1.0/server/jar"
+        url = f"https://meta.fabricmc.net/v2/versions/loader/{mc}/{FABRIC_LOADER}/1.1.0/server/jar"
         urllib.request.urlretrieve(url, d / "server.jar")
         (d / "launch.json").write_text(json.dumps({"cmd": [JAVA, "-Xmx6G", "-jar", "server.jar", "nogui"]}))
         # First start downloads the vanilla server and libraries, then exits because of the EULA.
@@ -37,15 +44,15 @@ def setup(loader, d: Path):
         inst = d / "quilt-installer.jar"
         urllib.request.urlretrieve("https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/"
                                    f"{QUILT_INSTALLER}/quilt-installer-{QUILT_INSTALLER}.jar", inst)
-        subprocess.run([JAVA, "-jar", str(inst), "install", "server", MC, "--download-server", "--install-dir=."],
+        subprocess.run([JAVA, "-jar", str(inst), "install", "server", mc, "--download-server", "--install-dir=."],
                        cwd=d, check=True, stdout=subprocess.DEVNULL)
         (d / "launch.json").write_text(json.dumps({"cmd": [JAVA, "-Xmx6G", "-jar", "quilt-server-launch.jar", "nogui"]}))
     else:
         inst = d / "installer.jar"
         urllib.request.urlretrieve(
-            f"https://maven.neoforged.net/releases/net/neoforged/neoforge/{NEOFORGE}/neoforge-{NEOFORGE}-installer.jar", inst)
+            f"https://maven.neoforged.net/releases/net/neoforged/neoforge/{neoforge}/neoforge-{neoforge}-installer.jar", inst)
         subprocess.run([JAVA, "-jar", str(inst), "--installServer"], cwd=d, check=True, stdout=subprocess.DEVNULL)
-        args = f"@libraries/net/neoforged/neoforge/{NEOFORGE}/win_args.txt"
+        args = f"@libraries/net/neoforged/neoforge/{neoforge}/win_args.txt"
         (d / "launch.json").write_text(json.dumps({"cmd": [JAVA, "-Xmx6G", args, "nogui"]}))
     (d / "eula.txt").write_text("eula=true\n")
     print("installed", loader, d)
@@ -139,6 +146,8 @@ def main():
     s = sub.add_parser("setup")
     s.add_argument("loader", choices=["fabric", "neoforge", "quilt"])
     s.add_argument("dir")
+    s.add_argument("--mc", default=MC)
+    s.add_argument("--neoforge", default=NEOFORGE)
     r = sub.add_parser("run")
     r.add_argument("dir")
     r.add_argument("seed")
@@ -151,7 +160,7 @@ def main():
     r.add_argument("--port", type=int, default=25599)
     a = ap.parse_args()
     if a.op == "setup":
-        setup(a.loader, Path(a.dir))
+        setup(a.loader, Path(a.dir), a.mc, a.neoforge)
     else:
         run(Path(a.dir), a.seed, a.mods, a.pregen, a.cmd, a.scale, a.keep_world, a.timeout, a.port)
 

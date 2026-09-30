@@ -19,7 +19,7 @@ public class BigOceansNeoForge {
             DeferredRegister.create(Registries.DENSITY_FUNCTION_TYPE, BigOceans.MOD_ID);
 
     static {
-        DENSITY_FUNCTION_TYPES.register(BigOceans.OCEAN_BASINS.getPath(), OceanBasinsFunction.CODEC::codec);
+        DENSITY_FUNCTION_TYPES.register(BigOceans.OCEAN_BASINS, OceanBasinsFunction.CODEC::codec);
     }
 
     public BigOceansNeoForge(IEventBus modBus) {

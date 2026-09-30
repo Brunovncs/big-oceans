@@ -1,12 +1,20 @@
 plugins {
-    id 'fabric-loom' version '1.11.8' apply false
+    id 'fabric-loom' version '1.13.6' apply false
     id 'net.neoforged.moddev' version '2.0.148' apply false
 }
+
+// Pick the Minecraft version with -Pmc=<version>; the matching versions/<version>.properties supplies the dependencies.
+def mc = findProperty('mc') ?: '1.21.1'
+def versionFile = file("versions/${mc}.properties")
+if (!versionFile.exists()) throw new GradleException("No versions/${mc}.properties")
+def versionProps = new Properties()
+versionFile.withInputStream { versionProps.load(it) }
+versionProps.each { k, v -> ext.set(k, v) }
 
 subprojects {
     apply plugin: 'java'
     group = mod_group
-    version = "${mod_version}+${minecraft_version}"
+    version = "${mod_version}+${rootProject.jar_label}"
 
     java {
         toolchain.languageVersion = JavaLanguageVersion.of(21)

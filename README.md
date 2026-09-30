@@ -6,18 +6,25 @@ ocean crossing goes from about 1 km to about 5 km, deep ocean covers four times 
 world, and the seas join into one world ocean between large land masses. Terrain shapes, biomes,
 beaches, rivers, caves and structures are still vanilla's.
 
-Big Oceans is open source (MIT) and in development. The 1.21.1 builds have been measured and
-tested in depth (numbers below); treat everything as a beta.
+Big Oceans is open source (MIT) and in development. It runs on Minecraft 1.21.1 to 1.21.11 with
+Fabric, Quilt and NeoForge. The 1.21.1 builds have been measured and tested in depth (numbers
+below); the later versions have a smaller smoke test. Treat everything as a beta.
 
 ![Vanilla on the left, Big Oceans on the right: seed 5, 49 × 49 km](images/vanilla_vs_big_oceans.png)
 
 ## Installing
 
-| Minecraft | Loader | Jar |
+There is one jar per loader and Minecraft range:
+
+| Minecraft | Fabric (with Fabric API; also Quilt) | NeoForge |
 |---|---|---|
-| 1.21.1 | Fabric Loader 0.15+ with Fabric API | `big_oceans-fabric-<version>+1.21.1.jar` |
-| 1.21.1 | Quilt Loader with Fabric API | the Fabric jar |
-| 1.21.1 | NeoForge 21.1 | `big_oceans-neoforge-<version>+1.21.1.jar` |
+| 1.21.1 | `big_oceans-fabric-<version>+1.21.1.jar` | `big_oceans-neoforge-<version>+1.21.1.jar` |
+| 1.21.2 – 1.21.3 | `big_oceans-fabric-<version>+1.21.2-1.21.3.jar` | `big_oceans-neoforge-<version>+1.21.2-1.21.3.jar` |
+| 1.21.4 | `…+1.21.4.jar` | `…+1.21.4.jar` |
+| 1.21.5 | `…+1.21.5.jar` | `…+1.21.5.jar` |
+| 1.21.6 – 1.21.8 | `…+1.21.6-1.21.8.jar` | `…+1.21.6-1.21.8.jar` |
+| 1.21.9 – 1.21.10 | `…+1.21.9-1.21.10.jar` | `…+1.21.9-1.21.10.jar` |
+| 1.21.11 | `…+1.21.11.jar` | `…+1.21.11.jar` |
 
 Install it before creating the world: it only shapes chunks that are generated while it is
 installed.
@@ -92,7 +99,7 @@ islands.
 ## Compatibility
 
 Tested on real dedicated servers (Chunky pregeneration, then the saved chunks read back and
-compared) and in real production clients, all on 1.21.1:
+compared) and in real production clients, on 1.21.1:
 
 | Platform / mod | Result |
 |---|---|
@@ -123,6 +130,19 @@ biomes cover less area. Strongholds and trial chambers are unchanged.
 
 Adding Big Oceans to an existing world was tested too: all 1 138 existing chunks stayed
 byte-identical, the new ones used Big Oceans, and the log warned about the seam.
+
+### Later versions
+
+The files Big Oceans builds on (`overworld/continents` and the continentalness noise) are
+byte-identical in vanilla from 1.21 to 1.21.11, the noise router references them the same way,
+and the code compiles
+unchanged against every version, so each jar is the same mod built against a different game.
+Every jar was started on a real Fabric and NeoForge server of the version it was built for
+(1.21.3, 1.21.4, 1.21.5, 1.21.8, 1.21.10, 1.21.11) with `tools/smoke.py`: the mod loads, reads
+its config, generates 225 chunks of the test region without errors, and the saved chunks have the
+same geography as on 1.21.1 (17.4–17.6 % water in that region on every version and loader). The
+in-between versions (1.21.2, 1.21.6, 1.21.7, 1.21.9) are covered by the ranges but were not
+started. The client-side and mod compatibility tests above were only done on 1.21.1.
 
 ## Measurements
 
@@ -163,8 +183,9 @@ place. Server startup was 11.1 s against 10.5 s.
 You need JDK 21.
 
 ```sh
-./gradlew build            # jars in fabric/build/libs and neoforge/build/libs
-./gradlew :common:test     # unit tests (config parsing, basin shape, scale 1.0 is exactly vanilla)
+./gradlew build                 # 1.21.1; jars in fabric/build/libs and neoforge/build/libs
+./gradlew build -Pmc=1.21.11     # any file in versions/: 1.21.1, 1.21.3, 1.21.4, 1.21.5, 1.21.8, 1.21.10, 1.21.11
+./gradlew :common:test           # unit tests (config parsing, basin shape, scale 1.0 is exactly vanilla)
 ```
 
 The measurement and compatibility tooling is in `tools/` (Python; `pip install -r
@@ -178,6 +199,7 @@ python tools/server.py setup fabric build/servers/fabric    # real servers (also
 python tools/bench.py fabric out.json 5:-7680:-1024         # vanilla against Big Oceans, same region
 python tools/compat.py fabric out.json 5:-7680:-1024 name=a.jar,b.jar ...
 python tools/client.py fabric build/client/fabric --world <save> --mods <jars>
+python tools/smoke.py <dir with jars> out.json              # every jar on a real server of its version
 ```
 
 `tools/jobs/regression.json` covers the seeds that were extreme during calibration: 134 (most
@@ -203,7 +225,8 @@ in-game screenshots. Test mods are expected in `build/testmods/<loader>/`.
 - Mods that override `overworld/continents` conflict, and mods that replace the overworld noise
   router (Tectonic) make Big Oceans do nothing.
 - Between 3.0 and 4.0 small changes of `ocean_scale` change a world a lot (see above).
-- Only 1.21.1 is supported so far.
+- 1.21.2 to 1.21.11 have only had the smoke test described above. 26.x changes the density
+  function format and is not supported.
 
 ## License
 

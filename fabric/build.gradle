@@ -20,7 +20,7 @@ dependencies {
 
 processResources {
     def props = [version: version, mod_id: mod_id, mod_name: mod_name, mod_description: mod_description,
-                 mod_license: mod_license, minecraft_version: minecraft_version, fabric_loader_version: fabric_loader_version]
+                 mod_license: mod_license, fabric_minecraft_range: fabric_minecraft_range, fabric_loader_version: fabric_loader_version]
     inputs.properties props
     filesMatching('fabric.mod.json') { expand props }
 }
