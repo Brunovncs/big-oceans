@@ -25,3 +25,25 @@ jobs:
           path: |
             fabric/build/libs/*[0-9].jar
             neoforge/build/libs/*[0-9].jar
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the tag matches mod_version
+        run: |
+          version=$(grep '^mod_version=' gradle.properties | cut -d= -f2)
+          test "${GITHUB_REF_NAME}" = "v${version}" || { echo "tag ${GITHUB_REF_NAME} but mod_version=${version}"; exit 1; }
+      - uses: actions/download-artifact@v4
+        with:
+          path: jars
+          merge-multiple: true
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" jars/*.jar --title "${GITHUB_REF_NAME}" --notes "Beta. Pick the jar for your loader and Minecraft version: \`big_oceans-<loader>-<version>+<minecraft>.jar\`. Fabric jars also run on Quilt. See the README for what was tested."
